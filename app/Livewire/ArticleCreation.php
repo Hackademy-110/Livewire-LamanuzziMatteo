@@ -32,6 +32,9 @@ class ArticleCreation extends Component
         $body="";
         session()->flash('message','articolo inserito');
     }
+    public function updated($propertyName){
+        $this->validateOnly($propertyName);
+    }
     public function render(){
         return view('livewire.article-creation');
     }
