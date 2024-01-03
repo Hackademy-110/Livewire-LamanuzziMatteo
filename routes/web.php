@@ -16,3 +16,4 @@ use App\Http\Controllers\GeneralController;
 
 Route::get('/', [GeneralController::class,'home'])->name('home');
 Route::get('/article/create',[GeneralController::class,'create'])->name('article.create');
+Route::get('/article/showAll',[GeneralController::class,'showA'])->name('article.showAll');

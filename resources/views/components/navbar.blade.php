@@ -13,7 +13,7 @@
             <a class="nav-link" href="{{route('article.create')}}">Crea Articolo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="{{route('article.showAll')}}">Tutti gli articoli</a>
           </li>
         </ul>
       </div>
