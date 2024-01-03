@@ -11,9 +11,14 @@ class ArticleCreation extends Component
     public $author;
     public $body;
     protected $rules=[
-        'title'=>'reuired',
+        'title'=>'required',
         'author'=>'required',
         'body'=>'required'
+    ];
+    protected $messages=[
+        'title.required'=>'l titolo non può essere vuoto',
+        'author.required'=>'Qualcuno deve essere l\'autore',
+        'body.required'=>'Il testo non può non esserci'
     ];
     public function create(){
         $this->validate();

@@ -5,6 +5,15 @@
         {{ session('message') }}
     </div>
 @endif
+@if($errors->any())
+    <div class="alert alert-danger mt-2">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <form class="mt-3" wire:submit="create">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Titolo</label>
