@@ -17,4 +17,12 @@ class GeneralController extends Controller
     $articles=Article::all();
     return view('article.showAll',compact('articles'));
     }
+    public function update($articleId){
+        $article=Article::find("$articleId");
+        return view('article.update',compact('article'));
+    }
+    public function delete($articleId){
+        $article=Article::find("$articleId");
+        return view('article.delete',compact('article'));
+    }
 }
